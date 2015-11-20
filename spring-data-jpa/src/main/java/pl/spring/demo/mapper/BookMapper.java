@@ -1,10 +1,10 @@
 package pl.spring.demo.mapper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import pl.spring.demo.entity.BookEntity;
 import pl.spring.demo.to.BookTo;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class BookMapper {
 
@@ -17,16 +17,26 @@ public class BookMapper {
 
     public static BookEntity map(BookTo bookTo) {
         if (bookTo != null) {
-            return new BookEntity(bookTo.getId(), bookTo.getTitle(), bookTo.getAuthors());
+            return new BookEntity(bookTo.getId(), bookTo.getTitle(), null,null);//do naprawy
         }
         return null;
     }
 
     public static List<BookTo> map2To(List<BookEntity> bookEntities) {
-        return bookEntities.stream().map(BookMapper::map).collect(Collectors.toList());
+       
+    	List<BookTo> toList= new ArrayList();
+    	for(BookEntity bookEntity: bookEntities){
+    		toList.add(BookMapper.map(bookEntity));
+    	}
+    	return toList;
+        
     }
 
-    public static List<BookEntity> map2Entity(List<BookTo> bookEntities) {
-        return bookEntities.stream().map(BookMapper::map).collect(Collectors.toList());
+    public static List<BookEntity> map2Entity(List<BookTo> bookToList) {
+    	List<BookEntity> entityList= new ArrayList();
+    	for(BookTo bookTo: bookToList){
+    		entityList.add(BookMapper.map(bookTo));
+    	}
+    	return entityList;
     }
 }

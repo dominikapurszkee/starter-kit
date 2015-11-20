@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="classpath:spring/spring-context.xml" />
+    <import resource="../common_configuration/CommonDatabase-context.xml"/>
+
+    <bean id="bookDao" class="pl.spring.demo.dao.impl.BookDaoImpl" />
 
 </beans>

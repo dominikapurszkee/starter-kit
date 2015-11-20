@@ -30,9 +30,17 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<BookTo> findBooksByAuthor(String author) {
-        return BookMapper.map2To(bookRepository.findBookByAuthor(author));
+    	return null;
+        //return BookMapper.map2To(bookRepository.findBookByAuthor(author));
     }
-
+    
+    @Override
+    @Transactional(readOnly = false)
+    public void deleteBook(Long id){
+    	bookRepository.delete(id);
+    	
+    }
+    
     @Override
     @Transactional(readOnly = false)
     public BookTo saveBook(BookTo book) {
@@ -40,4 +48,11 @@ public class BookServiceImpl implements BookService {
         entity = bookRepository.save(entity);
         return BookMapper.map(entity);
     }
+
+	@Override
+	public BookTo getBook(Long id) {
+		
+		return BookMapper.map(bookRepository.getOne(id));
+		
+	}
 }

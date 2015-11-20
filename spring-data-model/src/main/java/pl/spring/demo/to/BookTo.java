@@ -1,5 +1,9 @@
 package pl.spring.demo.to;
 
+import java.util.List;
+
+import pl.spring.demo.entity.AuthorEntity;
+
 public class BookTo {
     private Long id;
     private String title;
@@ -13,8 +17,27 @@ public class BookTo {
         this.title = title;
         this.authors = authors;
     }
+    
+    public BookTo(Long id, String title, List<AuthorEntity> authors) {
+        this.id = id;
+        this.title = title;
+        this.authors = mapAuthorsToString(authors);
+  
+    }
 
-    public Long getId() {
+    private String mapAuthorsToString(List<AuthorEntity> authors) {
+		StringBuilder stringBuilder=new StringBuilder();
+    	for(AuthorEntity author:authors){
+			stringBuilder.append(author.getPersonalData().getName());
+			stringBuilder.append(" ");
+			stringBuilder.append(author.getPersonalData().getSurname());
+			stringBuilder.append(", ");
+		}
+    	
+		return stringBuilder.toString().substring(0, stringBuilder.length()-2);
+	}
+
+	public Long getId() {
         return id;
     }
 
