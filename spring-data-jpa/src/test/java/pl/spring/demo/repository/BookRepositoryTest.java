@@ -5,13 +5,18 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import pl.spring.demo.entity.BookEntity;
+import org.springframework.util.Assert;
 
+import pl.spring.demo.dao.BookDao;
+import pl.spring.demo.dao.impl.BookDaoImpl;
+import pl.spring.demo.entity.BookEntity;
+import pl.spring.demo.service.impl.BookServiceImpl;
+import pl.spring.demo.to.BookSearchCriteria;
+
+import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "CommonRepositoryTest-context.xml")
@@ -42,4 +47,6 @@ public class BookRepositoryTest {
         assertFalse(booksEntity.isEmpty());
         assertEquals("Pierwsza książka", booksEntity.get(0).getTitle());
     }
+    
+    
 }

@@ -1,12 +1,16 @@
 package pl.spring.demo.dao;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import pl.spring.demo.entity.BookEntity;
 
+import pl.spring.demo.entity.BookEntity;
+import pl.spring.demo.to.BookSearchCriteria;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -42,4 +46,51 @@ public class BookDaoImplTest {
         assertFalse(booksEntity.isEmpty());
         assertEquals("Pierwsza książka", booksEntity.get(0).getTitle());
     }
+    
+    @Test
+  	public void testShouldFindBookWhenOnlyTitle() {
+  		// given
+  		BookSearchCriteria searchCriteria = new BookSearchCriteria();
+  		searchCriteria.setTitle("Pierwsza książka");
+  		// when
+  		List<BookEntity> books = new ArrayList<BookEntity>();
+  		books = bookDao.findBooksBySearchCriteria(searchCriteria);
+  		//then
+  		assertNotNull(books);
+        assertFalse(books.isEmpty());
+  		BookEntity bookEntity = books.get(0);
+		assertEquals(bookEntity.getTitle(), "Pierwsza książka");
+  	}
+      
+    @Test
+  	public void testShouldFindBookWhenTitleAndAuthor() {
+  		// given
+  		BookSearchCriteria searchCriteria = new BookSearchCriteria();
+  		searchCriteria.setTitle("Pierwsza książka");
+  		searchCriteria.setAuthor("A");
+  		// when
+  		List<BookEntity> books = new ArrayList<BookEntity>();
+  		books = bookDao.findBooksBySearchCriteria(searchCriteria);
+  		//then
+  		assertNotNull(books);
+  		assertFalse(books.isEmpty());
+  		assertEquals(books.get(0).getTitle(),  "Pierwsza książka");
+  	}
+  	
+    @Test
+  	public void testShouldFindBookWhenTitleAndAuthorAndLibrary() {
+  		// given
+  		BookSearchCriteria searchCriteria = new BookSearchCriteria();
+  		searchCriteria.setTitle( "Pierwsza książka");
+  		searchCriteria.setAuthor("A");
+  		searchCriteria.setLibraryName("Biblioteka Miejska");
+  		// when
+  		List<BookEntity> books = new ArrayList<BookEntity>();
+  		books = bookDao.findBooksBySearchCriteria(searchCriteria);
+  		//then
+  		assertNotNull(books);
+  		assertFalse(books.isEmpty());
+  		assertEquals(books.get(0).getTitle(), "Pierwsza książka");
+  	}
+    
 }

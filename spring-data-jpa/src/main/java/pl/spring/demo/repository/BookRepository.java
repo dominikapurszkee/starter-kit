@@ -17,4 +17,6 @@ public interface BookRepository extends JpaRepository<BookEntity, Long> {
    		+ "upper(author.personalData.surname) like concat('%', upper(:author), '%')")
     public List<BookEntity> findBookByAuthor(@Param("author") String author);
    
+   
+   
 }
