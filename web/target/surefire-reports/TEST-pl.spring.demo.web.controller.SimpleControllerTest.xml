@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\dpurszke\Documents\GitHub\starter-kit"/>
+    <property name="user.dir" value="C:\Users\dpurszke\Documents\GitHub\starter-kit\web"/>
     <property name="java.runtime.version" value="1.7.0_45-b18"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\endorsed"/>
@@ -26,9 +26,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\dpurszke\Desktop\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4247543350575479805.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\dpurszke\Desktop\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3250209381158008882.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_45\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\apache-maven-3.3.9\bin;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_45\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\apache-maven-3.3.9\bin;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\dpurszke\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="51.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -54,7 +54,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_45\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\dpurszke\Documents\GitHub\starter-kit\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\dpurszke\Documents\GitHub\starter-kit\web\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -64,11 +64,11 @@
   </properties>
   <testcase name="testHomePage" classname="pl.spring.demo.web.controller.SimpleControllerTest" time="0">
     <skipped/>
-    <system-out><![CDATA[2015-11-20 12:55:53,373 INFO org.springframework.test.context.support.AbstractContextLoader - Detected default resource location "classpath:pl/spring/demo/web/rest/BookRestServiceTest-context.xml" for test class [pl.spring.demo.web.rest.BookRestServiceTest]
-2015-11-20 12:55:53,373 INFO org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - GenericXmlWebContextLoader detected default locations for context configuration [ContextConfigurationAttributes@39852afc declaringClass = 'pl.spring.demo.web.rest.BookRestServiceTest', classes = '{}', locations = '{classpath:pl/spring/demo/web/rest/BookRestServiceTest-context.xml}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
-2015-11-20 12:55:53,373 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pl.spring.demo.web.rest.BookRestServiceTest]: BookRestServiceTest does not declare any static, non-private, non-final, inner classes annotated with @Configuration.
-2015-11-20 12:55:53,374 INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2015-11-20 12:55:53,420 INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@495679f0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4c5fa12d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1a4eb887, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2634b48f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4e3a2be1]
+    <system-out><![CDATA[2015-11-22 16:31:39,692 INFO org.springframework.test.context.support.AbstractContextLoader - Detected default resource location "classpath:pl/spring/demo/web/rest/BookRestServiceTest-context.xml" for test class [pl.spring.demo.web.rest.BookRestServiceTest]
+2015-11-22 16:31:39,707 INFO org.springframework.test.context.support.AbstractDelegatingSmartContextLoader - GenericXmlWebContextLoader detected default locations for context configuration [ContextConfigurationAttributes@1db0aa6e declaringClass = 'pl.spring.demo.web.rest.BookRestServiceTest', classes = '{}', locations = '{classpath:pl/spring/demo/web/rest/BookRestServiceTest-context.xml}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+2015-11-22 16:31:39,707 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [pl.spring.demo.web.rest.BookRestServiceTest]: BookRestServiceTest does not declare any static, non-private, non-final, inner classes annotated with @Configuration.
+2015-11-22 16:31:39,707 INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-11-22 16:31:39,738 INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2a41da1c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@495679f0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c5fa12d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1a4eb887, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2634b48f]
 ]]></system-out>
   </testcase>
 </testsuite>
